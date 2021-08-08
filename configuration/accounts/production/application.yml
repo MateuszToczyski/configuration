@@ -1,12 +1,12 @@
 server:
   port: 7777
 accounts:
-  jpa:
-    database: mysql
-    show-sql: true
-    ddl-auto: update
-  datasource:
-    driver-class-name: "com.mysql.cj.jdbc.Driver"
-    url: "jdbc:mysql://localhost:3306/accounts"
-    username: accounts
-    password: accounts
+  spring:
+    jpa:
+      database: mysql
+      show-sql: true
+      ddl-auto: update
+    datasource:
+      url: "jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true"
+      username: accounts
+      password: accounts
