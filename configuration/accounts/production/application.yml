@@ -2,14 +2,7 @@ server:
   port: 7777
 accounts:
   datasource:
-    spring:
-      datasource:
-        driver-class-name: "com.mysql.jdbc.Driver"
-        url: "jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true"
-        username: accounts
-        password: accounts
-      jpa:
-        database: mysql
-        show-sql: true
-        hibernate:
-          ddl-auto: update
+    url: "jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true"
+    username: accounts
+    password: accounts
+    ddl-auto: update
