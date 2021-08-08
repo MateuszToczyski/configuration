@@ -6,3 +6,10 @@ spring:
     username: accounts
     password: accounts
     ddl-auto: update
+info:
+  app:
+    name: "Accounts"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
