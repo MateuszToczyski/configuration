@@ -1,6 +1,8 @@
 server:
   port: 7777
 spring:
+  main:
+    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
     username: banking
@@ -8,6 +10,11 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 info:
   app:
     name: "Accounts"
