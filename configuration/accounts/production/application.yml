@@ -1,17 +1,30 @@
-accounts:
-  server:
-    port: 7777
+server:
+  port: 7777
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: accounts
+  profiles:
+    active: production
   datasource:
     url: jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
     username: accounts
     password: accounts
-    ddl-auto: update
+  jpa:
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  app:
+    name: "Accounts"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
+application:
   allow-get-accounts: true
-customers:
-  server:
-    port: 7778
-  datasource:
-    url: jdbc:mysql://localhost:3306/customers?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
-    username: customers
-    password: customers
-    ddl-auto: update
