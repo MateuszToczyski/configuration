@@ -3,11 +3,11 @@ server:
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
+    username: banking
+    password: banking
+  jpa:
+    hibernate:
+      ddl-auto: update
 info:
   app:
     name: "Accounts"
