@@ -1,26 +1,11 @@
 server:
   port: 7777
 spring:
-  main:
-    allow-bean-definition-overriding: true
   datasource:
     url: jdbc:mysql://localhost:3306/accounts?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
-    username: accounts
-    password: accounts
-  jpa:
-    hibernate:
-      ddl-auto: update
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
 info:
   app:
     name: "Accounts"
     version: "0.0.1"
-    profile: ${spring.profiles.active}
-  serverInfo:
-    port: ${server.port}
 application:
   allow-get-accounts: true
