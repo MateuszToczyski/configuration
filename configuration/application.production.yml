@@ -1,6 +1,12 @@
 spring:
   main:
     allow-bean-definition-overriding: true
+  datasource:
+    username: banking
+    password: banking
+  jpa:
+    hibernate:
+      ddl-auto: update
 eureka-client:
   fetchRegistry: true
   serviceUrl:
