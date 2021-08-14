@@ -6,4 +6,4 @@ accounts:
     username: accounts
     password: accounts
     ddl-auto: update
-  allow-get-accounts: true
+  allow-get-accounts: false
