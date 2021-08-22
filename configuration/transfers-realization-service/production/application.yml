@@ -1,0 +1,24 @@
+server:
+  port: 7780
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/transfers?serverTimezone=Europe/Warsaw&useSSL=False&allowPublicKeyRetrieval=true
+    username: banking
+    password: banking
+  jpa:
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+info:
+  app:
+    name: "Transfers realization service"
+    version: "0.0.1"
+    profile: ${spring.profiles.active}
+  serverInfo:
+    port: ${server.port}
